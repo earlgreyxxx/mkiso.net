@@ -19,8 +19,8 @@ namespace mkiso
     public const uint STGM_WRITE = 0x1;
     public const uint STGM_CREATE = 0x1000;
 
-    [DllImport("Kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-    internal static extern SafeFileHandle CreateFile(
+    [DllImport("Kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+    internal static extern SafeFileHandle CreateFileW(
       string lpFileName,
       [MarshalAs(UnmanagedType.U4)] FileAccess dwDesiredAccess,
       [MarshalAs(UnmanagedType.U4)] FileShare dwShareMode,
@@ -49,7 +49,7 @@ namespace mkiso
         throw new Exception(ERROR_MESSAGE_INVALID_TYPE);
 
       string physicalDriveName = string.Format(@"\\.\{0}:",driveLetter);
-      SafeFileHandle handle = Windows.CreateFile(
+      SafeFileHandle handle = Windows.CreateFileW(
         physicalDriveName,
         FileAccess.Read,
         FileShare.Write | FileShare.Read | FileShare.Delete,

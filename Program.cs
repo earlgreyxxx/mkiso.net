@@ -90,11 +90,12 @@ namespace mkiso
         };
         mi.readDone += (count, total) =>
         {
-          Console.WriteLine($"コピー中: {count}/{total}");
+          string p = ((decimal)count / total * 100).ToString("F2");
+          Console.Write($"\rコピー中: {count}/{total}({p}%)");
         };
         mi.copyDone += () =>
         {
-          Console.WriteLine("コピー完了");
+          Console.WriteLine("\rコピー完了");
         };
 
         await mi.Copy(letter, BUFFER_SIZE);
@@ -123,6 +124,8 @@ namespace mkiso
         CheckFileExistsAndPrompt(destPath);
 
         var mi = new MakeISO(destPath);
+
+        Console.WriteLine("ISOファイルを生成しています...");
 
         if (await Task.Run(() => mi.Make(srcPath,volumeName)))
           Console.WriteLine($"{srcPath}:出力しました。");

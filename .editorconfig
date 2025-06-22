@@ -2,3 +2,6 @@
 
 # IDE1006: 命名スタイル
 dotnet_diagnostic.IDE1006.severity = silent
+
+# SYSLIB1054: コンパイル時に P/Invoke マーシャリング コードを生成するには、'DllImportAttribute' の代わりに 'LibraryImportAttribute' を使用します
+dotnet_diagnostic.SYSLIB1054.severity = silent
