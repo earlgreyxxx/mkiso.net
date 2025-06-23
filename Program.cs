@@ -52,17 +52,16 @@ namespace mkiso
    dir: 任意のディレクトリからISOファイルを作成します。
   help: このヘルプを表示します。
 
->> mkiso drv <drive letter> [out directory path]
+>> mkiso drv sample.iso q
 
-  ドライブレター(コロンは不要:エラーチェック無し)を指定し、
-  指定したディレクトリにダンプ出力します。
-  (ファイル名にボリュームラベルを使用します)
+  ISOファイルパス(sample.iso)に指定したドライブレター(コロン不要)のドライブのディスクをダンプします。
 
-  指定できるドライブはCD-ROMかDVDメディアなど。
-  (市販のDVD Videoなどプロテクトがあるメディアは当然ですがエラーになります。)
+  指定できるドライブにはデータ用のCD-ROMかDVDメディアが挿入されている必要があります。
+  (音楽CD(CD Audio)や市販のDVD/Blulay Videoディスクなどのメディアはエラーになります。)
 
->> mkiso dir <dest path> <volume name> <src directory>
-   ディレクトリパスをルートとしてISOファイルを出力します。"
+>> mkiso dir sample.iso iso\source\dir VOLNAME
+
+   iso\source\dirパスをルートとしたISOファイルをsample.isoとして出力します。"
       );
     }
 
@@ -95,7 +94,7 @@ namespace mkiso
         };
         mi.copyDone += () =>
         {
-          Console.WriteLine("\rコピー完了");
+          Console.WriteLine("\nコピー完了");
         };
 
         await mi.Copy(letter, BUFFER_SIZE);
@@ -115,9 +114,7 @@ namespace mkiso
         return;
       }
 
-      string destPath = args[0];
-      string srcPath = args[1];
-      string volumeName = args[2];
+      string destPath = args[0],srcPath = args[1],volumeName = args[2];
 
       try
       {
