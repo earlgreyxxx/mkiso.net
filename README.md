@@ -1,34 +1,32 @@
 # mkiso
-ƒhƒ‰ƒCƒu‚à‚µ‚­‚ÍƒfƒBƒŒƒNƒgƒŠ‚©‚çISOƒtƒ@ƒCƒ‹‚ðì¬‚µ‚Ü‚·B‚Ù‚ÚAPIƒhƒLƒ…ƒƒ“ƒg‚ÌƒTƒ“ƒvƒ‹‚»‚Ì‚Ü‚Ü‚Å‚·B
+ãƒ‰ãƒ©ã‚¤ãƒ–ã‚‚ã—ãã¯ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰ISOãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚ã»ã¼APIãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ã‚µãƒ³ãƒ—ãƒ«ãã®ã¾ã¾ã§ã™ã€‚
 
-## ƒvƒ‰ƒbƒgƒtƒH[ƒ€
-* Windows10ˆÈ~^.NET9 ˆÈ~
+## ãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ 
+* Windows10ä»¥é™ï¼.NET9 ä»¥é™
 
-## ƒrƒ‹ƒh
+## ãƒ“ãƒ«ãƒ‰
 * Visual studio 2022 or higher.
 * Windows SDK commandline tools.
 
-## à–¾
+## èª¬æ˜Ž
 ```
-mkiso ƒTƒuƒRƒ}ƒ“ƒh ƒRƒ}ƒ“ƒhƒpƒ‰ƒ[ƒ^[
+mkiso ã‚µãƒ–ã‚³ãƒžãƒ³ãƒ‰ ã‚³ãƒžãƒ³ãƒ‰ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼
 ```
-### ƒTƒuƒRƒ}ƒ“ƒh:  
+### ã‚µãƒ–ã‚³ãƒžãƒ³ãƒ‰:  
 #### drv
-CD/DVD/BDƒhƒ‰ƒCƒu‚É‘}“ü‚³‚ê‚Ä‚¢‚éƒƒfƒBƒA‚©‚çISOƒtƒ@ƒCƒ‹‚ðƒ_ƒ“ƒv‚µ‚Ü‚·B
+CD/DVD/BDãƒ‰ãƒ©ã‚¤ãƒ–ã«æŒ¿å…¥ã•ã‚Œã¦ã„ã‚‹ãƒ¡ãƒ‡ã‚£ã‚¢ã‹ã‚‰ISOãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ€ãƒ³ãƒ—ã—ã¾ã™ã€‚
 
 ```
-mkiso drv <drive letter> [out directory path]
+mkiso drv <out iso path> <drive letter>
 ```
-ƒhƒ‰ƒCƒuƒŒƒ^[(ƒRƒƒ“‚Í•s—v:ƒGƒ‰[ƒ`ƒFƒbƒN–³‚µ)‚ðŽw’è‚µAŽw’è‚µ‚½ƒfƒBƒŒƒNƒgƒŠ‚Éƒ_ƒ“ƒvo—Í‚µ‚Ü‚·B  
-(ƒtƒ@ƒCƒ‹–¼‚Éƒ{ƒŠƒ…[ƒ€ƒ‰ƒxƒ‹‚ðŽg—p‚µ‚Ü‚·)
+å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ãŠã‚ˆã³ãƒ‰ãƒ©ã‚¤ãƒ–ãƒ¬ã‚¿ãƒ¼(ã‚³ãƒ­ãƒ³ä¸è¦)ã‚’æŒ‡å®šã—ã¾ã™ã€‚
 
-Žw’è‚Å‚«‚éƒhƒ‰ƒCƒu‚ÍCD-ROM‚©DVDƒƒfƒBƒA‚È‚ÇB  
-(Žs”Ì‚ÌDVD Video‚È‚ÇƒvƒƒeƒNƒg‚ª‚ ‚éƒƒfƒBƒA‚Í“–‘R‚Å‚·‚ªƒGƒ‰[‚É‚È‚è‚Ü‚·B)
+â€»ãƒ‡ãƒ¼ã‚¿ç”¨ãƒ¡ãƒ‡ã‚£ã‚¢ã®ã¿å¯¾å¿œã—ã¦ã„ã¾ã™ï¼ˆéŸ³æ¥½CDã‚„å¸‚è²©ã®DVD/Blulay Videoãªã©ãƒ—ãƒ­ãƒ†ã‚¯ãƒˆãŒã‚ã‚‹ãƒ¡ãƒ‡ã‚£ã‚¢ã¯ã‚¨ãƒ©ãƒ¼ã«ãªã‚Šã¾ã™ã€‚)
 
 #### dir
-”CˆÓ‚ÌƒfƒBƒŒƒNƒgƒŠ‚©‚çISOƒtƒ@ƒCƒ‹‚ðì¬‚µ‚Ü‚·B (ŽÀÛ‚ÉƒƒfƒBƒA‚ÉÄ‚¯‚é‚©‚Ç‚¤‚©‚ÍŽŽ‚µ‚Ä‚Ý‚Ü‚¹‚ñ)
+ä»»æ„ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‹ã‚‰ISOãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚ (å®Ÿéš›ã«ãƒ¡ãƒ‡ã‚£ã‚¢ã«ç„¼ã‘ã‚‹ã‹ã©ã†ã‹ã¯è©¦ã—ã¦ã¿ã¾ã›ã‚“)
 
 ```
-mkiso dir <dest path> <volume name> <src directory>
+mkiso dir <dest path> <src directory> <volume name>
 ```
-ƒfƒBƒŒƒNƒgƒŠƒpƒX‚ðƒ‹[ƒg‚Æ‚µ‚ÄISOƒtƒ@ƒCƒ‹‚ðo—Í‚µ‚Ü‚·B
+ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãƒ‘ã‚¹ã‚’ãƒ«ãƒ¼ãƒˆã¨ã—ã¦ISOãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡ºåŠ›ã—ã¾ã™ã€‚
